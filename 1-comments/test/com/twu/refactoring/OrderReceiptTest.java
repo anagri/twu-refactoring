@@ -33,7 +33,8 @@ public class OrderReceiptTest {
         assertThat(output, containsString("milk\t10.0\t2\t20.0\n"));
         assertThat(output, containsString("biscuits\t5.0\t5\t25.0\n"));
         assertThat(output, containsString("chocolate\t20.0\t1\t20.0\n"));
-
-
+        assertThat(output, containsString("Sales Tax\t6.5"));
+        assertThat(output, containsString("Total Amount\t71.5"));
     }
+
 }
