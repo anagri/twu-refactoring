@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1-comments-and-naming/1-comments-and-naming.iml" filepath="$PROJECT_DIR$/1-comments-and-naming/1-comments-and-naming.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-duplication/2-duplication.iml" filepath="$PROJECT_DIR$/2-duplication/2-duplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-conditionals-and-strategy/3-conditionals-and-strategy.iml" filepath="$PROJECT_DIR$/3-conditionals-and-strategy/3-conditionals-and-strategy.iml" />
     </modules>
   </component>
 </project>
