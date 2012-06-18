@@ -8,10 +8,10 @@ package com.twu.refactoring;
  * 
  */
 public class OrderReceipt {
-    private Order order;
+    private Order o;
 
-    public OrderReceipt(Order order) {
-        this.order = order;
+    public OrderReceipt(Order o) {
+        this.o = o;
 	}
 
 	public String printReceipt() {
@@ -22,14 +22,14 @@ public class OrderReceipt {
 
 		// print date, bill no, customer name
 //        output.append("Date - " + order.getDate();
-        output.append(order.getCustomerName());
-        output.append(order.getCustomerAddress());
+        output.append(o.getCustomerName());
+        output.append(o.getCustomerAddress());
 //        output.append(order.getCustomerLoyaltyNumber());
 
 		// prints lineItems
 		double totalSalesTax = 0d;
 		double totalAmount = 0d;
-		for (LineItem lineItem : order.getLineItems()) {
+		for (LineItem lineItem : o.getLineItems()) {
 			output.append(lineItem.getDescription());
 			output.append('\t');
 			output.append(lineItem.getPrice());
