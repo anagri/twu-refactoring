@@ -6,7 +6,7 @@ public class TicketEngine {
      * <pre>
      * Ticket pricing logic -
      *          Age     Married     Price
-     * Male     12      -           20
+     * Male     13      -           20
      *          19      -           25
      *          30      No          40
      *          30      Yes         35
@@ -29,7 +29,7 @@ public class TicketEngine {
      */
     public int calculatePrice(int age, boolean male, boolean married) {
         if (male) {
-            if (age <= 12)
+            if (age <= 13)
                 return 20;
             if (age <= 19)
                 return 25;

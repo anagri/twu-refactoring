@@ -17,7 +17,7 @@ public class TicketEngineTest {
 
     @Test
     public void shouldReturnCorrectPriceOfTicketsForMales() {
-        assertForCorrectPrice(12, true, false, 20);
+        assertForCorrectPrice(13, true, false, 20);
         assertForCorrectPrice(19, true, false, 25);
         assertForCorrectPrice(30, true, false, 40);
         assertForCorrectPrice(30, true, true, 35);
