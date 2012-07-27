@@ -8,34 +8,40 @@ public class NumberCruncher {
     }
 
     public int countEven() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 0) count++;
-        }
-        return count;
+        return countWith(new Predicate() {
+            @Override
+            public boolean evaluate(int number) {
+                return number % 2 == 0;
+            }
+        });
     }
 
     public int countOdd() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 1) count++;
-        }
-        return count;
+        return numbers.length - countEven();
     }
 
     public int countPositive() {
+        return countWith(new Predicate() {
+            @Override
+            public boolean evaluate(int number) {
+                return number >= 0;
+            }
+        });
+    }
+
+    public int countNegative() {
+        return numbers.length - countPositive();
+    }
+
+    private int countWith(Predicate predicate) {
         int count = 0;
         for (int number : numbers) {
-            if (number >= 0) count++;
+            if (predicate.evaluate(number)) count++;
         }
         return count;
     }
 
-    public int countNegative() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number < 0) count++;
-        }
-        return count;
+    private static interface Predicate {
+        public boolean evaluate(int number);
     }
 }
