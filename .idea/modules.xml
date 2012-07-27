@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/3-conditionals/3-conditionals.iml" filepath="$PROJECT_DIR$/3-conditionals/3-conditionals.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-feature-envy/4-feature-envy.iml" filepath="$PROJECT_DIR$/4-feature-envy/4-feature-envy.iml" />
       <module fileurl="file://$PROJECT_DIR$/5-strategy/5-strategy.iml" filepath="$PROJECT_DIR$/5-strategy/5-strategy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-rental/video-rental.iml" filepath="$PROJECT_DIR$/video-rental/video-rental.iml" />
     </modules>
   </component>
 </project>
