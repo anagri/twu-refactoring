@@ -1,0 +1,15 @@
+Observation :
+Nested If-else-case
+Duplicated logic
+Position not used to represent inside rover
+
+Smell - Complicated conditional logic for navigation
+Solution - Extract methods and move it to position, create enum Direction and use state pattern to simplify and distribute calculation
+
+Can try :
+Ask to implement solution without using enums, Java 1.4 typesafe object way
+
++ Immutable position object
++ Using state pattern
++ Using enums
++ Using equals and hashCode
