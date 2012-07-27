@@ -3,7 +3,7 @@ package com.twu.refactoring.strategy;
 public class Rover {
     private Position position;
 
-    public Rover(int x, int y, char direction) {
+    public Rover(int x, int y, Direction direction) {
         position = new Position(x, y, direction);
     }
 

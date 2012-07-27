@@ -3,9 +3,9 @@ package com.twu.refactoring.strategy;
 public class Position {
     private final int x;
     private final int y;
-    private final char direction;
+    private final Direction direction;
 
-    public Position(int x, int y, char direction) {
+    public Position(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
@@ -16,16 +16,16 @@ public class Position {
         int y = this.y;
 
         switch (direction) {
-            case 'N':
+            case NORTH:
                 y++;
                 break;
-            case 'S':
+            case SOUTH:
                 y--;
                 break;
-            case 'E':
+            case EAST:
                 x++;
                 break;
-            case 'W':
+            case WEST:
                 x--;
                 break;
         }
@@ -33,41 +33,11 @@ public class Position {
     }
 
     public Position turnLeft() {
-        char direction = this.direction;
-        switch (direction) {
-            case 'N':
-                direction = 'W';
-                break;
-            case 'S':
-                direction = 'E';
-                break;
-            case 'E':
-                direction = 'N';
-                break;
-            case 'W':
-                direction = 'S';
-                break;
-        }
-        return new Position(x, y, direction);
+        return new Position(x, y, direction.left());
     }
 
     public Position turnRight() {
-        char direction = this.direction;
-        switch (direction) {
-            case 'N':
-                direction = 'E';
-                break;
-            case 'S':
-                direction = 'W';
-                break;
-            case 'E':
-                direction = 'N';
-                break;
-            case 'W':
-                direction = 'S';
-                break;
-        }
-        return new Position(x, y, direction);
+        return new Position(x, y, direction.right());
     }
 
     @Override
@@ -88,7 +58,7 @@ public class Position {
     public int hashCode() {
         int result = x;
         result = 31 * result + y;
-        result = 31 * result + (int) direction;
+        result = 31 * result + direction.hashCode();
         return result;
     }
 }
