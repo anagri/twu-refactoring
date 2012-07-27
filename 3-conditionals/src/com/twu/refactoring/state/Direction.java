@@ -1,4 +1,4 @@
-package com.twu.refactoring.strategy;
+package com.twu.refactoring.state;
 
 public enum Direction {
     NORTH {

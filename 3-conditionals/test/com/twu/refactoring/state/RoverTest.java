@@ -1,8 +1,8 @@
-package com.twu.refactoring.strategy;
+package com.twu.refactoring.state;
 
 import org.junit.Test;
 
-import static com.twu.refactoring.strategy.Direction.NORTH;
+import static com.twu.refactoring.state.Direction.NORTH;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
