@@ -1,0 +1,30 @@
+Smell - Unclear variable names
+Solution - refactor using Rename (Shift + F6)
+Commit - dc093ee
+Instances -
+OrderReceipt.order
+LineItem.price
+LineItem.quantity
+LineItem.description
+Order.name
+Order.address
+Order.lineItems
+
+Smell - Comments
++ Not updated frequently
++ Dead Code, no longer applicable
+
+Smell - Comments : OrderReceipt // print headers
+Solution - refactoring shortcut Extract Method (Ctrl + Alt + M) to create method 'String generateHeader()' returning header to be output
+
+Smell - Comments : OrderReceipt // print lineItems
+Solution - refactoring and extracting a method print lineItems using LineItem.toString, added test for the LineItem.toString
++ Explain toString method
+
+Smell - Comments : OrderReceipt // calculate sales tax
+Solution - break the loop doing multiple things, extract methods for specific tasks
+
+Smell - Comments : OrderReceipt // calculate sales tax @ rate of 10%
+Solution - extract constant (Ctrl + Alt + C) and name it properly to make code communicate the same intent
+
+
