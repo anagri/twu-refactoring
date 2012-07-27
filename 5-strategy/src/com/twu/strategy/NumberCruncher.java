@@ -22,4 +22,20 @@ public class NumberCruncher {
         }
         return count;
     }
+
+    public int countPositive() {
+        int count = 0;
+        for (int number : numbers) {
+            if (number >= 0) count++;
+        }
+        return count;
+    }
+
+    public int countNegative() {
+        int count = 0;
+        for (int number : numbers) {
+            if (number < 0) count++;
+        }
+        return count;
+    }
 }
