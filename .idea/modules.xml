@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1-comments-and-naming/1-comments-and-naming.iml" filepath="$PROJECT_DIR$/1-comments-and-naming/1-comments-and-naming.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-duplication/2-duplication.iml" filepath="$PROJECT_DIR$/2-duplication/2-duplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-0-state/3-0-state.iml" filepath="$PROJECT_DIR$/3-0-state/3-0-state.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-conditionals/3-conditionals.iml" filepath="$PROJECT_DIR$/3-conditionals/3-conditionals.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-feature-envy/4-feature-envy.iml" filepath="$PROJECT_DIR$/4-feature-envy/4-feature-envy.iml" />
       <module fileurl="file://$PROJECT_DIR$/5-strategy/5-strategy.iml" filepath="$PROJECT_DIR$/5-strategy/5-strategy.iml" />
