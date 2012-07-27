@@ -13,3 +13,4 @@ Ask to implement solution without using enums, Java 1.4 typesafe object way
 + Using state pattern
 + Using enums
 + Using equals and hashCode
++ State and Strategy are if-killers
