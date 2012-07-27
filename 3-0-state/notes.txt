@@ -1,0 +1,5 @@
+Observation:
+Complicated switch case logic
+
+Solution - Refactor to type safe variables as in Java 1.4
+Can also use enums
