@@ -1,61 +1,55 @@
 package com.twu.refactoring.state;
 
-public class Direction {
-    private final char direction;
-
-    public Direction(char direction) {
-        this.direction = direction;
-    }
-
-    public Direction turnRight() {
-        switch (direction) {
-            case 'N':
-                return new Direction('E');
-            case 'S':
-                return new Direction('W');
-            case 'E':
-                return new Direction('N');
-            case 'W':
-                return new Direction('S');
-            default:
-                throw new IllegalArgumentException();
+public abstract class Direction {
+    public static final Direction NORTH = new Direction() {
+        @Override
+        public Direction turnRight() {
+            return EAST;
         }
-    }
 
-    public Direction turnLeft() {
-        switch (direction) {
-            case 'N':
-                return new Direction('W');
-            case 'S':
-                return new Direction('E');
-            case 'E':
-                return new Direction('N');
-            case 'W':
-                return new Direction('S');
-            default:
-                throw new IllegalArgumentException();
+        @Override
+        public Direction turnLeft() {
+            return WEST;
         }
+    };
+    public static final Direction SOUTH = new Direction() {
+        @Override
+        public Direction turnRight() {
+            return WEST;
+        }
+
+        @Override
+        public Direction turnLeft() {
+            return EAST;
+        }
+    };
+    public static final Direction EAST = new Direction() {
+        @Override
+        public Direction turnRight() {
+            return SOUTH;
+        }
+
+        @Override
+        public Direction turnLeft() {
+            return NORTH;
+        }
+    };
+    public static final Direction WEST = new Direction() {
+        @Override
+        public Direction turnRight() {
+            return SOUTH;
+        }
+
+        @Override
+        public Direction turnLeft() {
+            return NORTH;
+        }
+    };
+
+    private Direction() {
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public abstract Direction turnRight();
 
-        Direction direction1 = (Direction) o;
-
-        if (direction != direction1.direction) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        return (int) direction;
-    }
-
-    @Override
-    public String toString() {
-        return "Direction{direction=" + direction + '}';
-    }
+    public abstract Direction turnLeft();
 }
