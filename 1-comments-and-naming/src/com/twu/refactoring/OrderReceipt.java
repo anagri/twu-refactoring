@@ -7,6 +7,7 @@ package com.twu.refactoring;
  * total sales tax) and prints it.
  */
 public class OrderReceipt {
+    public static final double SALES_TAX = .10;
     private Order order;
 
     public OrderReceipt(Order order) {
@@ -45,8 +46,7 @@ public class OrderReceipt {
     private double calculateSalesTax() {
         double totalSalesTax = 0d;
         for (LineItem lineItem : order.getLineItems()) {
-            // calculate sales tax @ rate of 10%
-            double salesTax = lineItem.totalAmount() * .10;
+            double salesTax = lineItem.totalAmount() * SALES_TAX;
             totalSalesTax += salesTax;
         }
         return totalSalesTax;
