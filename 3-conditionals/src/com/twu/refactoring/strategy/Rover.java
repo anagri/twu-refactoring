@@ -1,67 +1,24 @@
 package com.twu.refactoring.strategy;
 
 public class Rover {
-    private int x;
-    private int y;
-    private char direction;
+    private Position position;
 
     public Rover(int x, int y, char direction) {
-        this.x = x;
-        this.y = y;
-        this.direction = direction;
+        position = new Position(x, y, direction);
     }
 
     public Position navigate(String instructions) {
         for (char command : instructions.toCharArray()) {
             if(command == 'M') {
-                switch (direction) {
-                    case 'N':
-                        y++;
-                        break;
-                    case 'S':
-                        y--;
-                        break;
-                    case 'E':
-                        x++;
-                        break;
-                    case 'W':
-                        x--;
-                        break;
-                }
+                position = position.moveForward();
             }
             if(command == 'L') {
-                switch (direction) {
-                    case 'N':
-                        direction = 'W';
-                        break;
-                    case 'S':
-                        direction = 'E';
-                        break;
-                    case 'E':
-                        direction = 'N';
-                        break;
-                    case 'W':
-                        direction = 'S';
-                        break;
-                }
+                position = position.turnLeft();
             }
             if(command == 'R') {
-                switch (direction) {
-                    case 'N':
-                        direction = 'E';
-                        break;
-                    case 'S':
-                        direction = 'W';
-                        break;
-                    case 'E':
-                        direction = 'N';
-                        break;
-                    case 'W':
-                        direction = 'S';
-                        break;
-                }
+                position = position.turnRight();
             }
         }
-        return new Position(x, y, direction);
+        return position;
     }
 }

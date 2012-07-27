@@ -11,6 +11,65 @@ public class Position {
         this.direction = direction;
     }
 
+    public Position moveForward() {
+        int x = this.x;
+        int y = this.y;
+
+        switch (direction) {
+            case 'N':
+                y++;
+                break;
+            case 'S':
+                y--;
+                break;
+            case 'E':
+                x++;
+                break;
+            case 'W':
+                x--;
+                break;
+        }
+        return new Position(x, y, direction);
+    }
+
+    public Position turnLeft() {
+        char direction = this.direction;
+        switch (direction) {
+            case 'N':
+                direction = 'W';
+                break;
+            case 'S':
+                direction = 'E';
+                break;
+            case 'E':
+                direction = 'N';
+                break;
+            case 'W':
+                direction = 'S';
+                break;
+        }
+        return new Position(x, y, direction);
+    }
+
+    public Position turnRight() {
+        char direction = this.direction;
+        switch (direction) {
+            case 'N':
+                direction = 'E';
+                break;
+            case 'S':
+                direction = 'W';
+                break;
+            case 'E':
+                direction = 'N';
+                break;
+            case 'W':
+                direction = 'S';
+                break;
+        }
+        return new Position(x, y, direction);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
