@@ -1,0 +1,5 @@
+Observation:
+There is repeated structure of calculation
+
++ Use strategy to isolate the logic, rest of the structure can then be re-used
+
