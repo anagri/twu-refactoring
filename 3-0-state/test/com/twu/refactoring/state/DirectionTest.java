@@ -24,9 +24,25 @@ public class DirectionTest {
     }
 
     @Test
+    public void shouldTurnRight() {
+        assertThat(new Direction('N').turnRight(), is(new Direction('E')));
+        assertThat(new Direction('E').turnRight(), is(new Direction('S')));
+        assertThat(new Direction('S').turnRight(), is(new Direction('W')));
+        assertThat(new Direction('W').turnRight(), is(new Direction('N')));
+    }
+
+    @Test
     public void shouldTurnWestWhenTurnLeftFromNorth() {
         Direction west = north.turnLeft();
         assertThat(west, is(new Direction('W')));
+    }
+
+    @Test
+    public void shouldTurnLeft() throws Exception {
+        assertThat(new Direction('N').turnLeft(), is(new Direction('W')));
+        assertThat(new Direction('E').turnLeft(), is(new Direction('N')));
+        assertThat(new Direction('S').turnLeft(), is(new Direction('E')));
+        assertThat(new Direction('W').turnLeft(), is(new Direction('S')));
     }
 
     @Test

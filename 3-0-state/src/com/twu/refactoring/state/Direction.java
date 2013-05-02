@@ -14,9 +14,9 @@ public class Direction {
             case 'S':
                 return new Direction('W');
             case 'E':
-                return new Direction('N');
-            case 'W':
                 return new Direction('S');
+            case 'W':
+                return new Direction('N');
             default:
                 throw new IllegalArgumentException();
         }
