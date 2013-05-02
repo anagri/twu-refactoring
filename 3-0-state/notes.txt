@@ -1,5 +1,9 @@
 Observation:
 Complicated switch case logic
+Wrong implementation for turnRight - missing test case to cover the scenario
 
-Solution - Refactor to type safe variables as in Java 1.4
+
+Solution -
+First write the test and then start refactoring
+Refactor to type safe variables as in Java 1.4
 Can also use enums
